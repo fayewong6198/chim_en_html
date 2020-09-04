@@ -8,13 +8,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Arsenal&family=Barlow:wght@300;400&family=Be+Vietnam:wght@300&family=Bellota:wght@300&family=Montserrat+Alternates:wght@300;400&family=Niramit:wght@300&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Dosis&display=swap"
-      rel="stylesheet"
-    />
+
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/font/flaticon.css" />
 
@@ -39,37 +36,10 @@
 
     <!-- Navbar -->
     <section id="main-navbar">
-      <div class="navbar-1">
-        <div class="container">
-          <div class="logo">Oganic</div>
-          <div class="nav-link">
-            <ul>
-              <a href="#"><li>Trang chủ</li></a>
-              <a href="#"><li>Giới thiệu</li></a>
-              <a href="#"><li>Event</li></a>
-              <a href="#"><li>Tài khoản ngân hàng</li></a>
-            </ul>
-          </div>
-          <div class="nav-contact">
-            <i class="fas fa-headset"></i>
-            <div class="phone-email">
-              <p><span class="lead">Hotline</span>: 5555 5555</p>
-              <p>Email: visitek@gmail.com</p>
-            </div>
-          </div>
-        </div>
-      </div>
       <div class="navbar-2">
         <div class="container">
-          <div class="categories">
-            <div class="text">
-              <i class="fas fa-align-left"></i>
-              <p>Danh mục</p>
-            </div>
-            <div class="icon">
-              <i class="fas fa-chevron-circle-down"></i>
-            </div>
-          </div>
+          <div class="logo">Oganic</div>
+
           <form action="" class="search">
             <input type="text" placeholder="Nhập từ khóa" />
             <button type="submit"><i class="fa fa-search"></i></button>
@@ -98,13 +68,82 @@
               </a>
             </div>
             <div class="user-icon">
-              <a href="#">
+              <div class="user-btn">
                 <i class="fas fa-user"></i>
-              </a>
-              <div class="">
-                <p><a href="login.htm">Đăng nhập</a></p>
-                <p><a href="register.htm">Đăng kí</a></p>
+
+                <p>Tài khoản</p>
               </div>
+
+              <div class="user-container">
+                <h6>Welcome to <strong>Organic</strong></h6>
+                <a href="login.htm"
+                  ><button class="login-btn">Đăng nhập</button></a
+                >
+
+                <a href="register.htm"
+                  ><button class="register-btn">Đăng kí</button></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar-1">
+        <div class="container">
+          <div class="categories-container">
+            <div class="categories">
+              <div class="text">
+                <i class="fas fa-align-left"></i>
+                <p>Danh mục</p>
+              </div>
+            </div>
+            <div class="categories-list">
+              <div class="category">
+                <h6>Food</h6>
+                <div class="categories-sublist">
+                  <div class="sub-category">
+                    <h6>Food</h6>
+                  </div>
+                  <div class="sub-category">
+                    <h6>Drink</h6>
+                  </div>
+                  <div class="sub-category">
+                    <h6>Electric</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="category">
+                <h6>Drink</h6>
+                <div class="categories-sublist">
+                  <div class="sub-category">
+                    <h6>1</h6>
+                  </div>
+                  <div class="sub-category">
+                    <h6>2</h6>
+                  </div>
+                  <div class="sub-category">
+                    <h6>3</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="category">
+                <h6>Electric</h6>
+              </div>
+            </div>
+          </div>
+          <div class="nav-link">
+            <ul>
+              <a href="#"><li>Trang chủ</li></a>
+              <a href="#"><li>Giới thiệu</li></a>
+              <a href="#"><li>Event</li></a>
+              <a href="#"><li>Tài khoản ngân hàng</li></a>
+            </ul>
+          </div>
+          <div class="nav-contact">
+            <i class="fas fa-headset"></i>
+            <div class="phone-email">
+              <p><span class="lead">Hotline</span>: 5555 5555</p>
+              <p>Email: visitek@gmail.com</p>
             </div>
           </div>
         </div>
@@ -112,72 +151,101 @@
     </section>
     <!-- Body -->
     <section id="home-body">
-      <div class="container">
-        <div class="products">
-          <div class="product">
-            <div class="product-image">
-              <a href="product.htm"><img src="img/canhdiem.jpg" alt="" /></a>
+      <div class="banner-container">
+        <div class="categories-list">
+          <div class="category">
+            <h6>Food</h6>
+            <div class="categories-sublist">
+              <div class="sub-category">
+                <p>Food</p>
+              </div>
+              <div class="sub-category">
+                <p>Drink</p>
+              </div>
+              <div class="sub-category">
+                <p>Electric</p>
+              </div>
             </div>
-            <h6>Lorem ipsum dolor sit amet.</h6>
-            <p>500.000 VND</p>
-            <button>Add to Cart</button>
           </div>
-          <div class="product">
-            <div class="product-image out-of-stock">
-              <a href="product.htm">
-                <a href="product.htm"><img src="img/canhdiem.jpg" alt="" /></a>
-              </a>
-              <span>Out of stock</span>
+          <div class="category">
+            <h6>Drink</h6>
+            <div class="categories-sublist">
+              <div class="sub-category">
+                <p>1</p>
+              </div>
+              <div class="sub-category">
+                <p>2</p>
+              </div>
+              <div class="sub-category">
+                <p>3</p>
+              </div>
             </div>
-            <h6>Lorem ipsum dolor sit amet.</h6>
-            <p>500.000 VND</p>
-            <button class="btn-add-to-cart">Add to Cart</button>
           </div>
-          <div class="product">
-            <div class="product-image">
-              <a href="product.htm"><img src="img/canhdiem.jpg" alt="" /></a>
+          <div class="category">
+            <h6>Electric</h6>
+          </div>
+        </div>
+        <div class="banners">
+          <div class="main-banner">
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+              <img src="img/canhdiem.jpg" style="width: 100%" />
+            </div>
 
-              <a href="#"></a>
+            <div class="mySlides fade">
+              <img src="img/canh_diem3.jpg" style="width: 100%" />
             </div>
-            <h6>Lorem ipsum dolor sit amet.</h6>
-            <p>500.000 VND</p>
-            <button>Add to Cart</button>
+
+            <div class="mySlides fade">
+              <img src="img/canhdiem.jpg" style="width: 100%" />
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
           </div>
-          <div class="product">
-            <div class="product-image">
-              <a href="product.htm"><img src="img/canhdiem.jpg" alt="" /></a>
-            </div>
-            <h6>Lorem ipsum dolor sit amet.</h6>
-            <p>500.000 VND</p>
-            <button>Add to Cart</button>
+          <!-- The dots/circles -->
+          <div style="text-align: center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
           </div>
-          <div class="product">
-            <div class="product-image">
-              <a href="product.htm"><img src="img/canhdiem.jpg" alt="" /></a>
+        </div>
+      </div>
+      <div class="container">
+        <div class="product-section">
+          <h3 class="title-product-section">Sản phẩm bán chạy</h3>
+          <div class="products">
+            <div class="product">
+              <div class="product-image">
+                <a href="product.htm"><img src="img/canhdiem.jpg" alt="" /></a>
+              </div>
+              <h6>Lorem ipsum dolor sit amet.</h6>
+              <div class="price">
+                <p>500.000 VND</p>
+                <p class="discount-price">700.000 VND</p>
+              </div>
             </div>
-            <h6>Lorem ipsum dolor sit amet.</h6>
-            <p>500.000 VND</p>
-            <button>Add to Cart</button>
-          </div>
-          <div class="product">
-            <div class="product-image">
-              <a href="product.htm"><img src="img/canhdiem.jpg" alt="" /></a>
+            <div class="product">
+              <div class="product-image out-of-stock">
+                <a href="product.htm">
+                  <a href="product.htm"
+                    ><img src="img/canhdiem.jpg" alt=""
+                  /></a>
+                </a>
+                <span>Out of stock</span>
+              </div>
+              <h6>Lorem ipsum dolor sit amet.</h6>
+              <div class="price">
+                <p>500.000 VND</p>
+              </div>
             </div>
-            <h6>Lorem ipsum dolor sit amet.</h6>
-            <p>500.000 VND</p>
-            <button>Add to Cart</button>
-          </div>
-          <div class="product">
-            <div class="product-image">
-              <a href="product.htm"><img src="img/canhdiem.jpg" alt="" /></a>
-            </div>
-            <h6>Lorem ipsum dolor sit amet.</h6>
-            <p>500.000 VND</p>
-            <button>Add to Cart</button>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Footer -->
     <footer id="main-footer">
       <div class="container">
         <div>
@@ -239,3 +307,38 @@
     </footer>
   </body>
 </html>
+
+<script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  // Next/previous controls
+  function plusSlides(n) {
+    showSlides((slideIndex += n));
+  }
+
+  // Thumbnail image controls
+  function currentSlide(n) {
+    showSlides((slideIndex = n));
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {
+      slideIndex = 1;
+    }
+    if (n < 1) {
+      slideIndex = slides.length;
+    }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+  }
+</script>
