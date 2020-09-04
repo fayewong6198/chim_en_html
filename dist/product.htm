@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Topbar -->
+    <section id="main-topbar">
+      <div class="container">
+        <div>Work time: Monday - Friday: 08AM-06-PM</div>
+        <div>
+          <ul>
+            <li>
+              <a href="login.htm">Login</a>
+            </li>
+            <li><a href="register.htm">Register</a></li>
+            <li><a href="#">Vietnamese</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navbar -->
+    <section id="main-navbar">
+      <div class="container">
+        <div class="nav-link">
+          <ul>
+            <a class="brand" href="index.htm">Organic</a>
+            <li class="active">
+              <a href="index.htm" class="nav-link-item">Home</a>
+            </li>
+            <li><a href="about.htm" class="nav-link-item">Contact</a></li>
+            <li><a href="contact.htm" class="nav-link-item">About</a></li>
+            <li class="">
+              <a href="product.htm" class="nav-link-item">Product</a>
+              <div class="nav-menu">
+                <div class="menu-items">
+                  <a href="">1</a>
+                  <div class="nav-submenu">
+                    <div><a href="">abc</a></div>
+                    <div><a href="">abc</a></div>
+                    <div><a href="">abc</a></div>
+                    <div><a href="">abc</a></div>
+                  </div>
+                </div>
+                <div class="menu-items">
+                  <a href="">2</a>
+                  <div class="nav-submenu">
+                    <div><a href="">abc</a></div>
+                    <div><a href="">abc</a></div>
+                    <div><a href="">abc</a></div>
+                    <div><a href="">abc</a></div>
+                  </div>
+                </div>
+                <div class="menu-items">
+                  <a href="">3</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="nav-action">
+          <form action="" class="search">
+            <input type="text" />
+            <button type="submit"><i class="fas fa-search"></i></button>
+          </form>
+          <i class="fas fa-heart">
+            <div class="number">1</div>
+          </i>
+          <i class="fas fa-shopping-cart">
+            <div class="number">1</div>
+          </i>
+        </div>
+      </div>
+    </section>
+    <!-- Link Bar -->
+    <section id="breadcrumbs">
+      <div class="container">
+        <ul class="breadcrumb">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Pictures</a></li>
+          <li><a href="#">Summer 15</a></li>
+          <li>Italy</li>
+        </ul>
+      </div>
+    </section>
+    <section id="main-product-body">
+      <div class="container">
+        <div class="product-images">
+          <img src="img/canhdiem.jpg" alt="" />
+        </div>
+        <div class="description">
+          <div class="rating">
+            <div class="star">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i>
+            </div>
+            <p>3 reviews</p>
+          </div>
+          <h1>Surface Pro 6</h1>
+          <div class="price">200,000VND</div>
+          <h4>Short Description:</h4>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+            aliquid harum repellendus aut similique modi, maiores esse enim
+            consectetur sit explicabo pariatur alias ut ipsum quas ullam
+            molestias nesciunt rerum!
+          </p>
+          <div>
+            <ul class="product-details">
+              <li>Lorem ipsum dolor sit.</li>
+              <li>Lorem ipsum dolor sit.</li>
+              <li>Lorem ipsum dolor sit.</li>
+              <li>Lorem ipsum dolor sit.</li>
+              <li>Lorem ipsum dolor sit.</li>
+              <li>Lorem ipsum dolor sit.</li>
+            </ul>
+          </div>
+          <div class="size">
+            <h4>Size:</h4>
+            <div class="choice">
+              <input type="radio" id="male" name="gender" value="male" />
+              <label for="male">Small</label>
+            </div>
+
+            <div class="choice">
+              <input type="radio" id="female" name="gender" value="female" />
+              <label for="female">Medium</label>
+            </div>
+            <div class="choice">
+              <input type="radio" id="other" name="gender" value="other" />
+              <label for="other">Large</label>
+            </div>
+          </div>
+          <div class="product-actions">
+            <input type="number" />
+            <button class="btn-primary">Add to cart</button>
+            <button class="btn-secondary">Buy Now</button>
+            <i class="far fa-heart icon-favorite"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="product-full-detail">
+      <div class="container">
+        <!-- Tab links -->
+        <div class="tab">
+          <button
+            class="tablinks"
+            onclick="openCity(event, 'Full Descriptions')"
+          >
+            Full Descriptions
+          </button>
+          <button class="tablinks" onclick="openCity(event, 'Reviews')">
+            Reviews
+          </button>
+          <button class="tablinks" onclick="openCity(event, 'Tokyo')">
+            Tokyo
+          </button>
+        </div>
+
+        <!-- Tab content -->
+        <div id="Full Descriptions" class="tabcontent">
+          <h3>London</h3>
+          <p>London is the capital city of England.</p>
+        </div>
+
+        <div id="Reviews" class="tabcontent">
+          <h3>Customer Reviews</h3>
+          <div class="review-container">
+            <div class="user">
+              <img src="img/canh_diem3.jpg" alt="no data" /><span
+                >Username</span
+              >
+            </div>
+            <div class="rating">
+              <div class="star">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i>
+              </div>
+              <p class="title">Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="date">1/1/2020</div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+              amet iste doloremque totam debitis voluptatum distinctio
+              assumenda, maxime quas, veniam consequuntur voluptate esse
+              reiciendis unde. Pariatur eveniet possimus harum commodi.
+            </p>
+            <div class="actions">
+              <button class="btn-helpful">Helpful</button>
+              <button class="btn-comment">Comment</button>
+              <button class="btn-report">Report</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="Tokyo" class="tabcontent">
+          <h3>Tokyo</h3>
+          <p>Tokyo is the capital of Japan.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer id="main-footer">
+      <div class="container">
+        <div>
+          <h2>Oganic Logo</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum
+            debitis quidem est suscipit ut sequi at, inventore rerum in.
+            Accusamus!
+          </p>
+
+          <ul class="social-icons">
+            <li>
+              <a href=""><i class="fab fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fab fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fab fa-google"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fab fa-instagram"></i></a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer-section">Information</h2>
+          <ul class="footer-link">
+            <li><a href="">Lorem, ipsum dolor.</a></li>
+            <li><a href="">Lorem, ipsum dolor.</a></li>
+            <li><a href="">Lorem, ipsum dolor.</a></li>
+            <li><a href="">Lorem, ipsum dolor.</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-section">Usefull Link</h2>
+          <ul class="footer-link">
+            <li><a href="">Lorem, ipsum dolor.</a></li>
+            <li><a href="">Lorem, ipsum dolor.</a></li>
+            <li><a href="">Lorem, ipsum dolor.</a></li>
+            <li><a href="">Lorem, ipsum dolor.</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-section">Subcribe</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
+            omnis?
+          </p>
+          <form action="" class="email-subcribe">
+            <input type="text" />
+            <button type="submit">
+              <i class="fas fa-paper-plane"></i>Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script>
+    function openCity(evt, cityName) {
+      // Declare all variables
+      var i, tabcontent, tablinks;
+
+      // Get all elements with class="tabcontent" and hide them
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+
+      // Get all elements with class="tablinks" and remove the class "active"
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+
+      // Show the current tab, and add an "active" class to the button that opened the tab
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+  </script>
+</html>
