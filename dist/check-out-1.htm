@@ -8,10 +8,12 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Dosis&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Arsenal&family=Barlow:wght@300;400&family=Be+Vietnam:wght@300&family=Bellota:wght@300&family=Montserrat+Alternates:wght@300;400&family=Niramit:wght@300&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/main.css" />
+
+    <link rel="stylesheet" href="/dist/css/main.css" />
+    <link rel="stylesheet" href="/dist/css/font/flaticon.css" />
 
     <title>Document</title>
   </head>
@@ -34,59 +36,118 @@
 
     <!-- Navbar -->
     <section id="main-navbar">
-      <div class="container">
-        <div class="nav-link">
-          <ul>
-            <a class="brand" href="index.htm">Organic</a>
-            <li class="active">
-              <a href="index.htm" class="nav-link-item">Home</a>
-            </li>
-            <li><a href="about.htm" class="nav-link-item">Contact</a></li>
-            <li><a href="contact.htm" class="nav-link-item">About</a></li>
-            <li class="">
-              <a href="products-list.htm" class="nav-link-item">Product</a>
-              <div class="nav-menu">
-                <div class="menu-items">
-                  <a href="">1</a>
-                  <div class="nav-submenu">
-                    <div><a href="">abc</a></div>
-                    <div><a href="">abc</a></div>
-                    <div><a href="">abc</a></div>
-                    <div><a href="">abc</a></div>
-                  </div>
+      <div class="navbar-2">
+        <div class="container">
+          <div class="logo">Oganic</div>
+
+          <form action="" class="search">
+            <input type="text" placeholder="Nhập từ khóa" />
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+          <div class="icons">
+            <div class="heart-icon">
+              <a href="#" class="favorite-link"
+                ><span class="flaticon-heart">
+                  <div class="number">1</div>
+                </span></a
+              >
+              <div class="">
+                <a href="/dist/user/favorite.htm">
+                  <p>Danh sách</p>
+                  <p>yêu thích</p></a
+                >
+              </div>
+            </div>
+            <div class="cart-icon">
+              <a href="/dist/cart.htm" class="cart-link">
+                <span class="flaticon-shopping-cart">
+                  <div class="number">12</div>
+                </span>
+                <div>
+                  <p>Giỏ</p>
+                  <p>Hàng</p>
                 </div>
-                <div class="menu-items">
-                  <a href="">2</a>
-                  <div class="nav-submenu">
-                    <div><a href="">abc</a></div>
-                    <div><a href="">abc</a></div>
-                    <div><a href="">abc</a></div>
-                    <div><a href="">abc</a></div>
+              </a>
+            </div>
+            <div class="user-icon">
+              <div class="user-btn">
+                <a href="/dist/user/info.htm"><i class="fas fa-user"></i></a>
+
+                <a href="/dist/user/info.htm"><p>Tài khoản</p></a>
+              </div>
+
+              <div class="user-container">
+                <h6>Welcome to <strong>Organic</strong></h6>
+                <a href="login.htm"
+                  ><button class="login-btn">Đăng nhập</button></a
+                >
+
+                <a href="register.htm"
+                  ><button class="register-btn">Đăng kí</button></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar-1">
+        <div class="container">
+          <div class="categories-container">
+            <div class="categories">
+              <div class="text">
+                <i class="fas fa-align-left"></i>
+                <p>Danh mục</p>
+              </div>
+            </div>
+            <div class="categories-list">
+              <div class="category">
+                <h6>Food</h6>
+                <div class="categories-sublist">
+                  <div class="sub-category">
+                    <h6>Food</h6>
                   </div>
-                </div>
-                <div class="menu-items">
-                  <a href="">3</a>
+                  <div class="sub-category">
+                    <h6>Drink</h6>
+                  </div>
+                  <div class="sub-category">
+                    <h6>Electric</h6>
+                  </div>
                 </div>
               </div>
-            </li>
-          </ul>
-        </div>
-
-        <div class="nav-action">
-          <form action="" class="search">
-            <input type="text" />
-            <button type="submit"><i class="fas fa-search"></i></button>
-          </form>
-          <a href="favorite.htm">
-            <i class="fas fa-heart">
-              <div class="number">1</div>
-            </i>
-          </a>
-          <a href="cart.htm"
-            ><i class="fas fa-shopping-cart">
-              <div class="number">1</div>
-            </i>
-          </a>
+              <div class="category">
+                <h6>Drink</h6>
+                <div class="categories-sublist">
+                  <div class="sub-category">
+                    <h6>1</h6>
+                  </div>
+                  <div class="sub-category">
+                    <h6>2</h6>
+                  </div>
+                  <div class="sub-category">
+                    <h6>3</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="category">
+                <h6>Electric</h6>
+              </div>
+            </div>
+          </div>
+          <div class="nav-link">
+            <ul>
+              <a href="#"><li>Trang chủ</li></a>
+              <a href="#"><li>Giới thiệu</li></a>
+              <a href="#"><li>Event</li></a>
+              <a href="#"><li>Tài khoản ngân hàng</li></a>
+            </ul>
+          </div>
+          <div class="nav-contact">
+            <i class="fas fa-headset"></i>
+            <div class="phone-email">
+              <p><span class="lead">Hotline</span>: 5555 5555</p>
+              <p>Email: visitek@gmail.com</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -45,7 +45,10 @@ body {
   //font-family: "Arsenal", sans-serif;
   // font-family: "Barlow", sans-serif;
   font-family: "Be Vietnam", sans-serif;
-  input {
+  input,
+  select,
+  option,
+  textarea {
     // font-family: "Barlow", sans-serif;
     font-family: "Be Vietnam", sans-serif;
   }
@@ -64,6 +67,10 @@ a {
   text-decoration: none;
   color: $dark-color;
   cursor: pointer;
+}
+
+.form-group {
+  display: flex;
 }
 
 ul {
@@ -190,6 +197,7 @@ button {
 
   .navbar-1 {
     background-color: white;
+    font-size: 1rem;
 
     .container {
       display: grid;
@@ -201,14 +209,17 @@ button {
         color: $dark-color;
       }
       justify-content: space-between;
-      margin: 0rem 2rem;
+      margin: 0rem 1rem;
 
       .nav-contact {
         display: flex;
 
         align-items: center;
         font-size: 1rem;
-        line-height: 1.25rem;
+        line-height: 1rem;
+        p {
+          font-size: 0.75rem;
+        }
 
         i {
           font-size: 1.75rem;
@@ -262,10 +273,13 @@ button {
             color: black;
             padding: 0.5rem;
             transition: all 0.1s linear;
+            font-size: 0.1rem;
+
             h6 {
               transition: all 0.1s;
 
               font-weight: 100;
+              font-size: 0.1rem;
             }
 
             &:hover {
@@ -449,6 +463,9 @@ button {
             display: flex;
             align-items: center;
             justify-content: center;
+            p {
+              margin-bottom: 1px;
+            }
           }
 
           &:hover {
@@ -498,6 +515,7 @@ button {
           outline-width: 0;
           border-style: none;
           padding: 0.8rem 1rem;
+          // margin: 0.25rem 0rem;
 
           &:focus {
             border: 1px solid $secondary-color;
@@ -508,6 +526,7 @@ button {
           border-radius: 0 20px 20px 0;
           width: 70px;
           background-color: white;
+          // margin: 0.25rem 0rem;
         }
       }
     }
@@ -673,7 +692,7 @@ button {
       box-shadow: 5px 8px 5px 5px #ddd;
       .product-image {
         img {
-          transform: scale(1.2);
+          transform: scale(1.05);
           cursor: pointer;
         }
       }
@@ -683,7 +702,7 @@ button {
     overflow: hidden;
     height: 30vh; /* height of container */
     img {
-      transition: all 0.3s;
+      transition: all 0.1s;
     }
   }
   h6 {
@@ -1055,8 +1074,9 @@ button {
 #breadcrumbs {
   .container {
     /* Style the list */
+
     ul.breadcrumb {
-      padding: 0.5rem 1rem;
+      padding: 0.25rem 1rem;
       list-style: none;
       background-color: #eee;
     }
@@ -1064,7 +1084,7 @@ button {
     /* Display list items side by side */
     ul.breadcrumb li {
       display: inline;
-      font-size: 1rem;
+      font-size: 0.85rem;
     }
 
     /* Add a slash symbol (/) before/behind each list item */
@@ -1271,7 +1291,7 @@ button {
 #main-product-body {
   .container {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 4fr 7fr 2fr;
     gap: 2rem;
 
     /* Position the image container (needed to position the left and right arrows) */
@@ -1543,6 +1563,12 @@ button {
               i {
                 margin-right: 0.5rem;
               }
+
+              &:hover {
+                background-color: $primary-color;
+                color: white;
+                opacity: 1;
+              }
             }
 
             .buy-later {
@@ -1552,10 +1578,19 @@ button {
               color: $dark-color;
               background-color: white;
               border: 1px solid #ddd;
+
+              &:hover {
+                background-color: $primary-color;
+
+                color: white;
+                opacity: 1;
+              }
             }
           }
 
           .cart-price {
+            .price {
+            }
             p {
               font-size: 1.2rem;
               font-weight: 600;
@@ -1581,15 +1616,20 @@ button {
         .btn-continue {
           display: flex;
           align-items: center;
-
+          color: $primary-color;
+          border: 1px solid $primary-color;
+          padding: 0.5rem 1rem;
+          border-radius: 5px;
+          transition: all 0.3s;
           i {
             padding-right: 0.5rem;
-            transition: all 0.3s;
           }
 
           &:hover {
+            background-color: $primary-color;
+            color: white;
             i {
-              padding-right: 1.5rem;
+              color: white;
             }
           }
         }
@@ -1600,6 +1640,11 @@ button {
         padding: 1rem 1rem;
         border-radius: 15px;
         .total-price {
+          color: $primary-color;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
           font-size: 2rem;
           font-weight: 700;
         }
@@ -1607,6 +1652,10 @@ button {
         h3 {
           font-weight: 100;
           color: $dark-color;
+
+          span {
+            text-transform: none;
+          }
         }
         .check-out {
           border-radius: 5px;
@@ -1626,32 +1675,45 @@ button {
   .container {
     display: grid;
     grid-template-columns: 7fr 3fr;
-    gap: 5em;
+    gap: 3rem;
     margin-bottom: 1rem;
 
+    .total-price {
+      background-color: white;
+      padding: 0rem 1rem 1rem 1rem;
+    }
+
     .form-group {
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: 2fr 7fr;
       margin: 0.5rem 0rem;
+      font-size: 0.85rem;
 
       input[type="text"],
       input[type="email"],
       select,
       option,
       textarea {
-        padding: 0.5rem 0.5rem;
-        font-size: 1rem;
+        padding: 0.25rem 1rem;
+        font-size: 0.85rem;
+
+        &:focus {
+          outline: none;
+          border: 1px solid $secondary-color;
+        }
       }
 
       textarea {
-        font-size: 1.25rem;
+        font-size: 0.85rem;
       }
     }
     form {
       // position: relative;
-
+      background-color: white;
+      padding: 1rem 1rem;
+      padding-bottom: 3.5rem;
       button {
-        padding: 0.75rem 1.25rem;
+        padding: 0.65rem 3rem;
         background-color: $primary-color;
         color: white;
         float: right;
@@ -1664,10 +1726,11 @@ button {
     }
 
     .check-out-cart-product {
+      background-color: white;
+      padding: 1rem 1rem;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 1rem;
-      margin: 1rem 0rem;
 
       .check-out-cart-image {
         width: 100%;
@@ -1692,10 +1755,38 @@ button {
     min-height: 350px;
 
     .left-bar {
+      min-height: 300px;
+
+      min-width: 200px;
+      i {
+        margin-right: 1rem;
+        max-resolution: 0.5rem;
+        // font-size: 1rem;
+      }
+      .user-account {
+        display: flex;
+        padding: 0.25rem 1rem;
+        align-items: center;
+        i {
+          font-size: 2rem;
+          margin-right: 0.5rem;
+        }
+        .lead {
+          font-size: 0.9rem;
+        }
+        p {
+          font-size: 0.8rem;
+        }
+      }
+
       .actions {
+        .active {
+          background-color: $medium-color;
+          border-left: 2px solid $light-primary-color;
+        }
         a {
           display: block;
-          padding: 0.25rem 1rem;
+          padding: 0.4rem 1rem;
           font-size: 0.85rem;
           transition: all 0.2s;
           &:hover {
@@ -1706,15 +1797,175 @@ button {
       }
     }
 
-    .payments {
-      h2 {
-        font-weight: 100;
-        text-align: center;
-        margin: 1rem 0;
+    h2 {
+      font-weight: 100;
+      font-size: 1.5rem;
+      text-align: center;
+      margin: 0.5rem 0;
+      text-transform: none;
+      display: flex;
+    }
+
+    .favorite {
+      .items {
+        background-color: white;
+        padding: 1rem 1rem;
+        .item {
+          position: relative;
+          display: grid;
+          grid-template-columns: 2fr 6fr 3fr;
+          gap: 1rem;
+
+          .image {
+            min-width: 100px;
+            padding-top: 110px;
+            overflow: hidden;
+            position: relative;
+
+            img {
+              position: absolute;
+              top: 0;
+              left: 0;
+            }
+          }
+
+          .close-button {
+            position: absolute;
+            padding: 0.1rem 0.5rem;
+            border-radius: 5px;
+            transition: all 0.3s;
+            top: -15px;
+            right: -5px;
+            cursor: pointer;
+            &:hover {
+              font-size: 1.1rem;
+              color: $primary-color;
+              top: -17px;
+              right: -7px;
+            }
+          }
+
+          .info {
+            font-size: 0.8rem;
+            .title {
+              font-size: 0.95rem;
+              margin-bottom: 0.25rem;
+            }
+          }
+
+          .price {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin-right: 2rem;
+
+            .main-price {
+              p {
+                font-weight: 800;
+                padding: 0.25rem 1rem;
+                border: 1px solid $secondary-color;
+                border-radius: 5px;
+              }
+              color: $secondary-color;
+            }
+            .discount {
+              font-size: 0.75rem;
+
+              span {
+                color: gray;
+                text-decoration: line-through;
+              }
+            }
+          }
+        }
       }
+    }
+    .notifications {
+      margin-bottom: 1rem;
+
+      .content {
+        background-color: white;
+        .action-bar {
+          display: flex;
+          justify-content: space-between;
+          i {
+            font-size: 1.5rem;
+            padding: 0.5rem 1rem;
+            margin: 0rem 0.75rem;
+            cursor: pointer;
+
+            &:hover {
+              border-bottom: 2px solid $light-primary-color;
+            }
+          }
+          .active {
+            border-bottom: 2px solid $secondary-color;
+          }
+        }
+
+        .notification {
+          border-bottom: 1px solid $medium-color;
+          display: grid;
+          grid-template-columns: 1.5fr 1fr 7fr 2fr;
+          font-size: 0.8rem;
+          padding: 1rem 0.5rem;
+          transition: all 0.2s;
+          &:hover {
+            background-color: rgba($color: $light-primary-color, $alpha: 0.3);
+          }
+          .date-time {
+            padding: 1rem;
+          }
+
+          .icon {
+            margin-top: 0.5rem;
+            border-radius: 50%;
+            background-color: $secondary-color;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 3rem;
+            height: 3rem;
+            i {
+              font-size: 2rem;
+            }
+          }
+
+          .actions {
+            display: flex;
+            flex-direction: column;
+
+            button {
+              margin: 0.5rem 1rem;
+              padding: 0.5rem 1rem;
+              min-width: 100px;
+            }
+
+            .delete {
+              background-color: $danger-color;
+              color: white;
+            }
+
+            .read {
+              background-color: $primary-color;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+    .payments {
       table {
         background-color: white;
+        // tr:nth-child(even) {
+        //   background-color: rgba($color: $secondary-color, $alpha: 0.25);
+        // }
+        th {
+          background-color: rgba($color: $medium-color, $alpha: 0.8);
+        }
         width: 100%;
+        margin-bottom: 1rem;
+
         * {
           font-size: 0.85rem;
           padding: 0.5rem 1rem;
@@ -1722,7 +1973,72 @@ button {
         tr {
           transition: all 0.1s;
           &:hover {
-            background-color: rgba($color: $light-primary-color, $alpha: 0.3);
+            background-color: rgba($color: $light-primary-color, $alpha: 0.4);
+          }
+        }
+      }
+    }
+
+    .info {
+      form {
+        background-color: white;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+        margin-bottom: 1rem;
+        .form-group {
+          padding: 0.5rem 1rem;
+          display: grid;
+          grid-template-columns: 3fr 7fr;
+          max-width: 700px;
+          min-width: 600px;
+
+          label {
+            font-size: 0.85rem;
+          }
+
+          input[type="text"],
+          input[type="number"],
+          input[type="email"],
+          input[type="date"],
+          input[type="password"],
+          select,
+          option,
+          textarea {
+            padding: 0.25rem 1rem;
+
+            &:focus {
+              border: 1px solid $secondary-color;
+
+              outline: none;
+            }
+          }
+          input[type="radio"],
+          input[type="checkbox"] {
+            &:hover {
+              cursor: pointer;
+            }
+            &:checked {
+              color: $secondary-color;
+              border-color: $secondary-color;
+              background-color: $secondary-color;
+            }
+          }
+        }
+        button[type="submit"] {
+          width: 200px;
+          min-width: 150px;
+          padding: 0.5rem 1rem;
+          background-color: $secondary-color;
+          color: $dark-color;
+
+          p {
+            font-weight: 500;
+          }
+
+          &:hover {
+            background-color: $primary-color;
+            color: white;
+            opacity: 1.2;
           }
         }
       }
