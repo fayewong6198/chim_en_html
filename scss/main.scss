@@ -11,9 +11,10 @@ $topbar-color: #1b262c;
 $navbar-color: #3282b8;
 $footer-background-color: #1c3458;
 
+$success-color: #28b463;
 $danger-color: #cb4335;
 
-$light-color: #f4f4f4;
+$light-color: #f7f9f9;
 $medium-color: #eee;
 $dark-color: #333;
 $bg-image: url("");
@@ -79,11 +80,11 @@ ul {
   list-style: none;
 }
 
-h2,
-h3,
-h4 {
-  text-transform: uppercase;
-}
+// h2,
+// h3,
+// h4 {
+//   text-transform: uppercase;
+// }
 
 img {
   width: 100%;
@@ -1778,7 +1779,7 @@ button {
               }
 
               &:hover {
-                background-color: $primary-color;
+                background-color: $danger-color;
                 color: white;
                 opacity: 1;
               }
@@ -1793,7 +1794,7 @@ button {
               border: 1px solid #ddd;
 
               &:hover {
-                background-color: $primary-color;
+                background-color: $dark-color;
 
                 color: white;
                 opacity: 1;
@@ -1829,8 +1830,8 @@ button {
         .btn-continue {
           display: flex;
           align-items: center;
-          color: $primary-color;
-          border: 1px solid $primary-color;
+          color: $secondary-color;
+          border: 1px solid $secondary-color;
           padding: 0.5rem 1rem;
           border-radius: 5px;
           transition: all 0.3s;
@@ -1839,7 +1840,7 @@ button {
           }
 
           &:hover {
-            background-color: $primary-color;
+            background-color: $secondary-color;
             color: white;
             i {
               color: white;
@@ -1854,7 +1855,7 @@ button {
         border-radius: 15px;
 
         .total-price {
-          color: $primary-color;
+          color: $dark-primary-color;
 
           display: flex;
           justify-content: center;
@@ -1886,11 +1887,91 @@ button {
 }
 
 #check-out-1 {
+  h1 {
+    text-align: center;
+    font-size: 3rem;
+    padding: 1.5rem 0;
+    font-weight: 700;
+  }
+
+  .progressbar-container {
+    padding: 4rem 0rem;
+    margin: 0 auto;
+
+    h4 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .progressbar {
+      counter-reset: step;
+      width: 60%;
+      margin: 0 auto;
+
+      li {
+        list-style-type: none;
+        width: (100% / 3);
+        float: left;
+        font-size: 1rem;
+        position: relative;
+        text-align: center;
+        text-transform: uppercase;
+        color: gray;
+
+        &.active {
+          color: $primary-color;
+
+          &:before {
+            border-color: $light-primary-color;
+          }
+
+          + li {
+            &:after {
+              background-color: $light-primary-color;
+            }
+          }
+        }
+
+        &:before {
+          width: 30px;
+          height: 30px;
+          content: counter(step);
+          counter-increment: step;
+          line-height: 30px;
+          border: 2px solid gray;
+          display: block;
+          text-align: center;
+          margin: 0 auto 10px auto;
+          border-radius: 50%;
+          background-color: white;
+        }
+
+        &:after {
+          width: 100%;
+          height: 2px;
+          content: "";
+          position: absolute;
+          background-color: gray;
+          top: 15px;
+          left: -50%;
+          z-index: -1;
+        }
+
+        &:first-child {
+          &:after {
+            content: none;
+          }
+        }
+      }
+    }
+  }
+
   .container {
     display: grid;
     grid-template-columns: 7fr 3fr;
-    gap: 3rem;
+    gap: 2rem;
     margin-bottom: 1rem;
+    padding: 1rem;
 
     .total-price {
       background-color: white;
@@ -1900,7 +1981,8 @@ button {
     .form-group {
       display: grid;
       grid-template-columns: 2fr 7fr;
-      margin: 0.5rem 0rem;
+
+      margin: 1rem 0rem;
       font-size: 0.85rem;
 
       input[type="text"],
@@ -1908,53 +1990,94 @@ button {
       select,
       option,
       textarea {
-        padding: 0.25rem 1rem;
+        padding: 0.5rem 1rem;
         font-size: 0.85rem;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        transition: border 0.2s linear;
+        outline: none;
 
         &:focus {
-          outline: none;
-          border: 1px solid $secondary-color;
+          border: 1px solid $primary-color;
         }
+      }
+
+      &:focus-within label {
+        color: $primary-color;
       }
 
       textarea {
         font-size: 0.85rem;
       }
     }
+
     form {
       // position: relative;
       background-color: white;
       padding: 1rem 1rem;
       padding-bottom: 3.5rem;
+      box-shadow: 1px 2px 10px gainsboro;
+      border-radius: 10px;
+
       button {
         padding: 0.65rem 3rem;
         background-color: $primary-color;
         color: white;
         float: right;
+        border-radius: 10px;
 
         &:hover {
-          background-color: $footer-background-color;
+          background-color: $dark-primary-color;
+          color: white;
           opacity: 1;
         }
       }
     }
 
-    .check-out-cart-product {
-      background-color: white;
-      padding: 1rem 1rem;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 1rem;
+    .cart-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+      span {
+        width: 2rem;
+        height: 2rem;
+        text-align: center;
+        background-color: $secondary-color;
+        color: white;
+        border-radius: 50%;
+        box-shadow: 1px 2px 5px gray;
+      }
+    }
 
-      .check-out-cart-image {
-        width: 100%;
-        padding-top: 100%;
-        overflow: hidden;
-        position: relative;
-        img {
-          position: absolute;
-          top: 0;
-          left: 0;
+    .check-out-cart-products {
+      box-shadow: 1px 2px 10px gainsboro;
+      border-radius: 10px;
+
+      .check-out-cart-product {
+        background-color: white;
+        padding: 1rem 1rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+
+        .check-out-cart-image {
+          width: 100%;
+          padding-top: 100%;
+          overflow: hidden;
+          position: relative;
+          img {
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+        }
+      }
+
+      .total-price {
+        text-align: right;
+        p {
+          font-size: 2rem;
+          color: $secondary-color;
         }
       }
     }
@@ -1974,7 +2097,7 @@ button {
       min-width: 200px;
       i {
         margin-right: 1rem;
-        max-resolution: 0.5rem;
+        // max-resolution: 0.5rem;
         // font-size: 1rem;
       }
       .user-account {
